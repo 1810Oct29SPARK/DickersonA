@@ -11,20 +11,25 @@ ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: yellow;
+    background-color:#000000;
+    width: 12%;
 }
 li{
+    margin-top:1px;
     font-size: 20px;
     display: inline;
 }
 
 Body{
-    background-image: url("./greed.jpg");
+    background-image: url(https://media.giphy.com/media/12Eo7WogCAoj84/giphy.gif);
+    background-repeat:no-repeat;
+    background-size: 100%;
     position: relative;
 }
 .coloring {
     font-size: 20px;
     color: lawngreen;
+    border-image: 1px;
 }
 .viddisplay{
     position: relative;
@@ -49,8 +54,10 @@ form {
 }
 .txtbox{
     border: 2px solid black;
-    overflow-x: auto;
+    background-color: black;
+    overflow-wrap: auto;
     position: relative;
     height: 50%;
     width: 90%;
 }
+
