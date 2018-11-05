@@ -1,0 +1,49 @@
+header:{
+border-color: yellow;
+margin: 1;
+padding: 1;
+position: relative;
+    
+}
+
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: yellow;
+}
+li{
+    font-size: 20px;
+    display: inline;
+}
+
+Body{
+    background-image: url("./greed.jpg");
+    position: relative;
+}
+.coloring {
+    font-size: 20px;
+    color: lawngreen;
+}
+.viddisplay{
+    position: relative;
+
+}
+.heading{
+    font-size: 40px;
+    Color: crimson;
+   text-align: center;
+   background-color: black;
+   opacity: 0.7;
+   position: relative;
+}
+.pic {
+    background-position: center;
+}
+
+form {
+    opacity: 0.5;
+    font-weight: bold;
+    color:#000000;
+}
