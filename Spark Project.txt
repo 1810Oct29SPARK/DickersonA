@@ -1,0 +1,14 @@
+Spark project
+Design a website that does a thing 
+Has 4 pages
+HTML CSS and Javascript
+Flexbox
+Theme
+7 use cats
+User can make an account
+User can search video game sites 
+User can interact with other gamers
+User can see my opinions
+User can post there own opinions
+User can find links to game review site
+User can find videogame news.
