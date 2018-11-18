@@ -1,0 +1,59 @@
+nav {   
+    border: 3px solid aliceblue;
+    margin:1px;
+    padding:1px;
+    background-color: black;
+    opacity:0.8;
+}   /* changes things located in the nav bar */
+
+.background {
+    background-image: url("Gameback.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    padding:1;
+    margin: 1;
+}   /* changes things located in anything in background class */
+
+#displaynews {
+    border: 3px solid aliceblue;
+    text-align: auto;
+    color: rgb(250, 143, 245);
+    background:black;
+    opacity:0.8;
+}   /*changes things located in displaynews class, including the displayed api */
+
+#newsheading{
+    border: 3px solid aliceblue;
+    text-align: center;
+    color: rgb(250, 143, 245);
+    background:black;
+    opacity:0.8;
+}   /* aligns an changes things with newsheading ID */
+
+canvas {
+    padding:0;
+    border:0;
+    background: #eee; display: block; margin:0;
+    width: 480;
+    height: 320;
+}
+
+#mycanvas{
+
+}
+
+#ignbacking {
+        background-image: url("IGN.jpg");
+        background-size: cover;
+        padding:1;
+        margin: 1;
+        position: relative;
+}
+
+#gbbacking{
+    background-image: url("Giantbomb.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    padding:1;
+    margin: 1;
+}

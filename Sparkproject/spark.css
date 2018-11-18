@@ -1,0 +1,117 @@
+.heading{
+    border: 2px solid aliceblue;
+    font-size: 40px;
+    Color: Gold;
+   text-align: center;
+   background-color: black;
+   width: 100px;
+   height: 100px;
+   opacity: 0.8;
+width: 98.8%;
+}
+
+
+.textarea {
+    border: 5px, dotted, black;
+    background-color: black;
+    width:100px;
+    height:100px;
+    font-size:15px;
+    background-position: bottom
+}
+.centering{
+    text-align:center;
+}
+
+.flexbox
+{
+display: flex;
+background-image: url("Games")
+}
+ul{
+    list-style-type: none;
+    display:block;
+    
+}
+li{
+    padding: 10px;
+    display: inline;
+}
+
+.backing{
+background-image: linear-gradient(#0092f3, #9acdf0);
+background-size: 1600px, 900px;
+height: 100%;
+width: 100%;
+position: relative;
+}
+
+.headborder{
+    color: red;
+    background-color: rgb(56, 83, 105);
+    width: 98.8%;
+    text-align: center;
+    border: 3px dotted aliceblue;
+    border-radius: 3;
+    padding-right: 3; 
+    margin-right:3;
+    opacity: 0.7;
+}
+
+#button {
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid #000000;
+    display: inline-block;
+    font-size: 24px;
+}
+.positioning  {
+position: relative;
+width: 25%;
+height: 25%;    
+margin: auto;
+top: 300px;
+right: 500px;
+font-size: 20px;
+}
+
+.backing1 {
+    flex-grow: inherit;
+}
+
+/*</div>
+<div class = "positioning">
+    <pre id = "IGN"> Search IGN
+    </div>
+
+        <div class = "imagesizing">
+        </div>
+    <form action = "https://www.ign.com/search" method= "GET">
+    <input type = "text" name = "q" placeholder = "search">
+    <input type = "submit" value = "searchIGN">
+    </pre>
+    </form>*/
+
+   /* <div class = "container">
+    <form>
+        <div class = "jumbotron">
+            <h1 class = "display-4">
+                Welcome to the Arvester game site sign-in page!
+            </h1>
+
+        </div>
+        <form action = "Spark1.html" method = "GET">
+            <input type = "text" name = "username" placeholder = "Username" required = />
+            <input type = "password" name = "Password"  placeholder ="Password"/>
+            <input type = "submit"  value = "submit" /> */
+    
+
+    .container-fluid{
+        background-image: url("Gameback.jpg");
+        background-size: 100%;
+    }
+
+    nav {
+       padding-right: 10px;
+       padding-bottom: 10px;
+    }
