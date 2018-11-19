@@ -26,17 +26,22 @@ crossorigin="anonymous"></script>
         </ul>
       </div>
     </nav>  
+    <div class = "song3">
+        <button type="button" value="PLAY"  onclick="play()"> Sonic!
+          <audio id="audio" src="Soni.mp3" ></audio>
+          </button>
+          </div>
       <div class = "row">
           <div class = "col-sm">
-          <a href = "https://gamespot.com/search"> <img src = "Gamespot.png"/> </a>
-          <form action = "https://www.gamespot.com/" method = "GET">
+          <a href = "https://gamespot.com/"> <img src = "Gamespot.png"/> </a>
+          <form action = "https://www.gamespot.com/search/" method = "GET">
             <input type ="text" name = "q" />
             <input type = "submit" value = "Search Gamespot!"/>
             </form>
         </div>
       <div class = "col-sm">
           <a href = "https://kotaku.com"> <img src = "Kotaku.jpg"> </a>
-          <form action = "https://www.kotaku.com" method = "GET">
+          <form action = "https://www.kotaku.com/search/" method = "GET">
             <input type ="text" name = "q" />
             <input type = "submit" value = "Search Kotaku!"/>
             </form>
@@ -49,14 +54,14 @@ crossorigin="anonymous"></script>
       <div class = "row">
           <div class = "col-sm">
                 <a href = "https://polygon.com"> <img src = "Polygon.png"/> </a>
-                <form action = "https://www.polygon.com/" method = "GET">
+                <form action = "https://www.polygon.com/search/" method = "GET">
                   <input type ="text" name = "q" />
                   <input type = "submit" value = "Search Polygon!"/>
                   </form>
                 </div>
                 <div class = "col-sm">
                         <a href = "https://gamesradar.com"> <img src = "gamesradar.png"/> </a>
-                        <form action = "https://www.gamesradar.com/search/?" method = "GET">
+                        <form action = "https://www.gamesradar.com/search/" method = "GET">
                           <input type ="text" name = "Term" />
                           <input type = "submit" value = "Search Gamesradar!"/>
                           </form>
@@ -68,7 +73,7 @@ crossorigin="anonymous"></script>
           <div class = "row">
               <div class = "col-lg">
                     <a href = "https://pcgamer.com"> <img src = "pcgamer.png"/> </a>
-                    <form action = "https://www.pcgamer.com/" method = "GET">
+                    <form action = "https://www.pcgamer.com/search/" method = "GET">
                       <input type ="text" name = "term" />
                       <input type = "submit" value = "Search Pcgamer!"/>
                       </form>
@@ -84,7 +89,5 @@ crossorigin="anonymous"></script>
               </div>
           </div>
       </div>
-        <audio> 
-            <button type="button" value = "PLAY" id = "button">Play a fun song</button>
-        </audio>
+
 </body>
