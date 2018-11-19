@@ -94,6 +94,7 @@ function mySong () {
 }
 window.onload=function(){
     getGameNews();
+
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ctx.beginPath();
@@ -101,7 +102,7 @@ ctx.rect(20, 40, 50, 50);
 ctx.fillStyle = "#FF0000";      //Makes the box that     will hold the game giving it the dimensions we established
 ctx.fill();                 
 ctx.closePath();
-}
+
 ctx.beginPath();
 ctx.arc(240, 160, 20, 0, Math.PI*2, false);
 ctx.fillStyle = "green";
@@ -113,7 +114,7 @@ ctx.rect(160, 10, 100, 40);
 ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
 ctx.stroke();
 ctx.closePath();
-     
+}    
 /*
 /*
 function updateGame()
@@ -123,4 +124,25 @@ function updateGame()
     // add new p element as a child of another element
     document.getElementById ('IGN').appendChild(newPara)
 }*/
+/*
+function WriteToFile("log") {
 
+    let fso = CreateObject("Scripting.FileSystemObject");  
+    let s = fso.CreateTextFile("C:\test.txt", True);
+    s.writeline(document.passForm.input1.value);
+    s.writeline(document.passForm.input2.value);
+    s.writeline(document.passForm.input3.value);
+    s.Close();
+ }*/
+
+
+      function play() {
+          var audio = document.getElementById('audio');
+          if (audio.paused) {
+              audio.play();
+          }else{
+              audio.pause();
+              audio.currentTime = 0
+          }
+      }
+ 

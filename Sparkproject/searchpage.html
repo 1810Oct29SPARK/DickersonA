@@ -1,0 +1,90 @@
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="sparky.css" />
+  <script src = "spark.js"></script>
+</head>
+<body class = "background">
+  <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="History.html">Gamehistory</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="IGN.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="searchpage.html">Searchsection</a>
+          </li> 
+        </ul>
+      </div>
+    </nav>  
+      <div class = "row">
+          <div class = "col-sm">
+          <a href = "https://gamespot.com/search"> <img src = "Gamespot.png"/> </a>
+          <form action = "https://www.gamespot.com/" method = "GET">
+            <input type ="text" name = "q" />
+            <input type = "submit" value = "Search Gamespot!"/>
+            </form>
+        </div>
+      <div class = "col-sm">
+          <a href = "https://kotaku.com"> <img src = "Kotaku.jpg"> </a>
+          <form action = "https://www.kotaku.com" method = "GET">
+            <input type ="text" name = "q" />
+            <input type = "submit" value = "Search Kotaku!"/>
+            </form>
+            </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class = "row">
+          <div class = "col-sm">
+                <a href = "https://polygon.com"> <img src = "Polygon.png"/> </a>
+                <form action = "https://www.polygon.com/" method = "GET">
+                  <input type ="text" name = "q" />
+                  <input type = "submit" value = "Search Polygon!"/>
+                  </form>
+                </div>
+                <div class = "col-sm">
+                        <a href = "https://gamesradar.com"> <img src = "gamesradar.png"/> </a>
+                        <form action = "https://www.gamesradar.com/search/?" method = "GET">
+                          <input type ="text" name = "Term" />
+                          <input type = "submit" value = "Search Gamesradar!"/>
+                          </form>
+                </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <div class = "row">
+              <div class = "col-lg">
+                    <a href = "https://pcgamer.com"> <img src = "pcgamer.png"/> </a>
+                    <form action = "https://www.pcgamer.com/" method = "GET">
+                      <input type ="text" name = "term" />
+                      <input type = "submit" value = "Search Pcgamer!"/>
+                      </form>
+              </div>
+                <div class = "col-sm">
+                        <a href = "https://neoseeker.com"> <img src = "neoseeker.png"/> </a>
+                        <form action = "https://www.neoseeker.com/Search" method = "GET">
+                          <input type ="text" name = "q" />
+                          <input type = "submit" value = "Search Neoseeker!"/>
+                          </form>
+                          
+                </div>
+              </div>
+          </div>
+      </div>
+        <audio> 
+            <button type="button" value = "PLAY" id = "button">Play a fun song</button>
+        </audio>
+</body>

@@ -25,7 +25,7 @@ nav {
 #newsheading{
     border: 3px solid aliceblue;
     text-align: center;
-    color: rgb(250, 143, 245);
+    color:rgb(250, 143, 245);
     background:black;
     opacity:0.8;
 }   /* aligns an changes things with newsheading ID */
@@ -36,10 +36,6 @@ canvas {
     background: #eee; display: block; margin:0;
     width: 480;
     height: 320;
-}
-
-#mycanvas{
-
 }
 
 #ignbacking {
@@ -56,4 +52,36 @@ canvas {
     background-repeat:no-repeat;
     padding:1;
     margin: 1;
+}
+
+.centering {
+    text-align: center;
+}
+
+.col-md{
+    padding: 15px;
+}
+
+.song {
+    border:1px solid black;
+    width:3.4%;
+}
+.song2 {
+    border:1px solid black;
+    width:6%;
+}
+
+.opinion{
+    background: black;
+    color:rgb(250, 143, 245);
+    font-size: 20px;
+    opacity:0.9;
+}
+
+#wrap {
+    word-wrap: normal;
+    width: 65%;
+    background:rgb(0, 0, 0);
+    color:rgb(250, 143, 245);
+    opacity:0.9;
 }
