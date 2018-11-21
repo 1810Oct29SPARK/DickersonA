@@ -96,5 +96,8 @@ local.properties
 .sts4-cache/
 
 # End of https://www.gitignore.io/api/eclipse
+<<<<<<< HEAD
 
 Servers/
+=======
+>>>>>>> 5b38b8097dd605e188f32ec361aa9e10e326bcde
