@@ -2,5 +2,5 @@
 
 function sound(event)
 {
-    onclick="document.getElementById('Chaching.mp3').play();">
+    onclick="document.getElementByClassName('sound').innerhtml="Chaching.mp3";">
 }
