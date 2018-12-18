@@ -6,9 +6,8 @@ import Beans.Credentials;
 
 public interface CredentialsDAO {
 public List<Credentials> getEmployeeID();
-public Credentials createUserName();
-public Credentials deleteUserName();
-public Credentials createUserPassword();
-public Credentials deleteUserPassword();
+public void createUserNameandPassWord(String username, String password, int emplid);
+public void deleteUserName(String username);
+public void updateUserPassword(String password, String username);
 
 }
