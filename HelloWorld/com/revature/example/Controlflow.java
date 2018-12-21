@@ -69,27 +69,27 @@ public class Controlflow {
 		 * can be a byte, short, char, int data type, Enum, String, wrapper class
 		 * wrapper class being a reference to a primitive class through auto-boxing and auto-unboxing
 		 */
-		String dayOfWeek = "Bam";
+		DaysOfTheWeek dayOfWeek = DaysOfTheWeek.Tuesday;
 			switch(dayOfWeek) {
-			case "Sunday":
+			case Sunday:
 				System.out.println("Today is Sunday");
 			break;	
-			case "Monday":
+			case Monday:
 				System.out.println("Today is Monday");
 			break;
-			case "Tuesday":
+			case Tuesday:
 				System.out.println("Today is Tuesday");
 				break;
-			case "Wednesday":
+			case Wednesday:
 				System.out.println("Today is Wednesday");
 			break;
-			case "Thursday":
+			case Thursday:
 				System.out.println("Today is Thursday");
 			break;
-			case "Friday":
+			case Friday:
 				System.out.println("Today is Friday");
 			break;
-			case "Saturday":
+			case Saturday:
 				System.out.println("Today is Saturday");
 			break;
 			default:

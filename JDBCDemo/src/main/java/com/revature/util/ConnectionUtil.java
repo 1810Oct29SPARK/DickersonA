@@ -11,9 +11,9 @@ import java.util.Properties;
 public class ConnectionUtil {
 
 	public static Connection getConnection() throws SQLException {
-		String url = "";
-		String user = "";
-		String pass = "";
+		String url = " ";
+		String user = " ";
+		String pass = " ";
 		return DriverManager.getConnection(url,user,pass);
 	}
 	

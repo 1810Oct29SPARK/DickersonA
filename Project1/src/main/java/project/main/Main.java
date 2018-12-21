@@ -3,13 +3,12 @@ package project.main;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
-import Beans.Credentials;
 import Project1.util.ConnectionUtil;
 import ProjectDAO.CredentialsDAO;
 import ProjectDAO.CredentialsDAOImpl;
+import ProjectDAO.EmployeesDAO;
+import ProjectDAO.EmployeesDAOImpl;
 
 public class Main {
 
@@ -20,6 +19,8 @@ public class Main {
 	//cred.deleteUserName("ANNIE");
 	//cred.createUserNameandPassWord("ANNIE", "NOOT",2);
 	cred.updateUserPassword("BOB","ANNIE");
+	EmployeesDAO emp = new EmployeesDAOImpl();
+	System.out.println(emp.getEmployee());
 	}
 	static void init() {
 		try {
