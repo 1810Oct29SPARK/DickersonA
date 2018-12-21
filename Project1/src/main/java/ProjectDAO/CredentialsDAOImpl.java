@@ -155,4 +155,39 @@ public class CredentialsDAOImpl implements CredentialsDAO {
 		
 	}
 
+	public void getUserName(int eid)
+	{
+		List<Credentials> cd = new ArrayList<>();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			con = ConnectionUtil.getConnection("connections.properties");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String sql = "SELECT USER_NAME "+ "FROM CREDENTIALS "+ "WHERE EMPLOYEE_ID = ?";
+	
+	  try {
+		  pstmt = con.prepareStatement(sql);
+		  pstmt.setInt(1, eid);
+		rs=pstmt.executeQuery(sql);
+		while (rs.next()) {
+			String username = rs.getString(1);
+			System.out.println(username);
+			cd.add(new Credentials(username));
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	  
+	  
+	
 }
+}
+

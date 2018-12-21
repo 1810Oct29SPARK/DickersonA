@@ -53,7 +53,7 @@ public class EmployeesDAOImpl implements EmployeesDAO {
 				String empmanager = rs.getString(5);
 				int expenseid = rs.getInt(6);
 				System.out.println(empID);
-				em.add(new Employee(empID,firstname,lastname,companyposition,empmanager,expenseid));
+				em.add(new Employee(empID,firstname,lastname,companyposition,empmanager));
 				
 			}
 		} catch (SQLException e) {
