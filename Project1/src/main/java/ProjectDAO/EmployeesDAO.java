@@ -11,5 +11,5 @@ public interface EmployeesDAO {
 	public void deleteEmployee(int employeeid);
 	public void updateEmployeeName(String orgfirst, String orgsecond, String newfirst, String newsecond, int empid);
     public List<Employee> getEmployee();
-	
+	public Employee getEmployeeByID(int id);
 }

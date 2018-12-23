@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Beans.Credentials;
+import Beans.Employee;
 import Project1.util.ConnectionUtil;
 
 public class CredentialsDAOImpl implements CredentialsDAO {
@@ -178,16 +179,88 @@ public class CredentialsDAOImpl implements CredentialsDAO {
 		rs=pstmt.executeQuery(sql);
 		while (rs.next()) {
 			String username = rs.getString(1);
-			System.out.println(username);
 			cd.add(new Credentials(username));
 		}
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	  
-	  
-	
-}
-}
+	}
+	  @Override
+	 public List<Credentials> getEmployeeInfo(){
+		 List<Credentials> cd = new ArrayList<>();
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			try {
+				con = ConnectionUtil.getConnection("connections.properties");
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			String sql = "SELECT USER_NAME, PASSCODE "+ "FROM CREDENTIALS ";
+	 
+	  try {
+			pstmt = con.prepareStatement(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			rs = pstmt.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			while (rs.next()) {
+				String username = rs.getString(1);
+				String passcode = rs.getString(2);
+				System.out.println(passcode);
+				cd.add(new Credentials(username,passcode));
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			rs.close();
+			pstmt.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return cd;
+	}
 
+	@Override
+	public int getEmployeeByUsername(String username) {
+
+		try {
+			Connection con = ConnectionUtil.getConnection("connections.properties");
+		
+		String sql = "SELECT EMPLOYEE_ID "+"FROM CREDENTIALS "+"WHERE USER_NAME = ?";
+			 PreparedStatement pstmt = con.prepareStatement(sql);
+			 pstmt.setString(1, username);
+		ResultSet rs=pstmt.executeQuery();
+			while (rs.next()) {
+				int emplid = rs.getInt("Employee_ID");
+				return emplid;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	
+	return -1;
+	}
+}

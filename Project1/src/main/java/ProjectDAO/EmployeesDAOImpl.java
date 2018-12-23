@@ -51,10 +51,7 @@ public class EmployeesDAOImpl implements EmployeesDAO {
 				String lastname = rs.getString(3);
 				String companyposition = rs.getString(4);
 				String empmanager = rs.getString(5);
-				int expenseid = rs.getInt(6);
-				System.out.println(empID);
 				em.add(new Employee(empID,firstname,lastname,companyposition,empmanager));
-				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -164,6 +161,62 @@ public class EmployeesDAOImpl implements EmployeesDAO {
 			e.printStackTrace();
 		}
 	}
+	@Override
+	public Employee getEmployeeByID(int id) {
+		Employee em = new Employee();
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			con = ConnectionUtil.getConnection("connections.properties");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String sql = "SELECT * "+"FROM EMPLOYEE "+"WHERE EMPLOYEE_ID = ?";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			rs = pstmt.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			while (rs.next()) {
+				int empID = rs.getInt(1);
+				String firstname = rs.getString(2);
+				String lastname = rs.getString(3);
+				String companyposition = rs.getString(4);
+				String empmanager = rs.getString(5);
+				em =(new Employee(empID,firstname,lastname,companyposition,empmanager));
+
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			rs.close();
+			pstmt.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return em;
+	}
+
+
+	
+	
+	
 }
 
 	
