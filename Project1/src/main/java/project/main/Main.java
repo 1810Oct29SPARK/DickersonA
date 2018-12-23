@@ -17,10 +17,13 @@ import Services.Authserv;
 public class Main {
 
 	public static void main(String[] args) {
-		CredentialsDAOImpl cd = new CredentialsDAOImpl();
-		System.out.println(cd.getEmployeeByUsername("ANNIE"));
-		EmployeesDAOImpl e = new EmployeesDAOImpl();
-		System.out.println(e.getEmployeeByID(2));
+		//CredentialsDAOImpl cd = new CredentialsDAOImpl();
+	//	System.out.println(cd.getEmployeeByUsername("ANNIE"));
+		//EmployeesDAOImpl e = new EmployeesDAOImpl();
+		//System.out.println(e.getEmployeeByID(2));
+		//EmployeesDAOImpl em = new EmployeesDAOImpl();
+		CredentialsDAOImpl cred = new CredentialsDAOImpl();
+		cred.createUserNameandPassWord("GREATEST","BOSS" , 8);
 	}
 	
 	static void init() {

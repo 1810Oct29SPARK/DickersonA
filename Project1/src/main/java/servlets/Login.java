@@ -20,13 +20,12 @@ public class Login extends HttpServlet{
 		String password;
 		@Override
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			request.getRequestDispatcher("Login.html").forward(request, response);
+			request.getRequestDispatcher("Homep1.html").forward(request, response);
 	}
 		@Override
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			HttpSession session = request.getSession();
 			response.setContentType("text/html");
-			Credentials cd = new Credentials(request.getParameter("username"),request.getParameter("password"));
 			Employee e = a.isValidEmployee(request.getParameter("username"), request.getParameter("password"));
 		if (e != null) {
 			
@@ -35,12 +34,37 @@ public class Login extends HttpServlet{
 			session.setAttribute("Lastname", e.getLastname());
 			session.setAttribute("CompanyPosition", e.getCompanyposition());
 			session.setAttribute("EmployeeManager", e.getEmpmanager());
-			response.sendRedirect("employee");
+			System.out.println(session);
+			String pos = e.getCompanyposition();
+			switch (pos){
+			case "CEO":
+				response.sendRedirect("CEO");
+				break;
+			case "MANAGER":
+				response.sendRedirect("manager");
+				break;
+			case "EMPLOYEE":
+				response.sendRedirect("employee");
+				break;
+			default :
+					
+					response.sendRedirect("Login");
 			}
-			else 
-			{
-				response.sendRedirect("Login");
-			}
+						
+			//if (e.getCompanyposition().equals("CEO")) {
+				//response.sendRedirect("ceo");
+			//}
+			
+			//if (e.getCompanyposition().equals("MANAGER")) {
+				//response.sendRedirect("manager");
+			//}
+			//response.sendRedirect("employee");
+			//}
+			//else 
+			//{
+				//response.sendRedirect("Login");
+			//}
 		}
 			
+}
 }
